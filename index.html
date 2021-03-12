@@ -47,15 +47,19 @@
         <div class="editor">
             <div class="btn-container">
                 <button class="btn btn-reset">Reset</button>
-                <button class="btn btn-next btn-active">Next picture</button>
+                <button class="btn btn-next">Next picture</button>
                 <label class="btn btn-load" for="btnInput">
                     Load picture
                     <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
                 </label>
                 <button class="btn btn-save">Save picture</button>
             </div>
-            <img class="slide" src="img/img.jpg" alt="image" />
+            <div class="slideContainer">
+                <img class="slide" src="img/img.jpg" alt="image" />
+                <canvas id="image"></canvas>
+            </div>
         </div>
+
     </main>
     <footer class="footer">
         <div class="footer-container">
@@ -65,8 +69,9 @@
             </a>
         </div>
     </footer>
-    <button class="fullscreen openfullscreen"></button>
-    <script src="script.js"></script>
+    <button aria-label="full screen" class="fullscreen">
+
+        <script src="script.js"></script>
 </body>
 
 </html>

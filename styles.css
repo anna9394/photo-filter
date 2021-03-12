@@ -169,36 +169,42 @@ output {
   --saturate: 100%;
   --hue: 0deg;
 }
+
+.slideContainer {
+  text-align: center;
+}
+
 img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
   max-height: 520px;
-  max-width: 830px;
-  object-fit: contain;
   filter: blur(var(--blur, 0px)) invert(var(--invert, 0%))
     sepia(var(--sepia, 0%)) saturate(var(--saturate, 100%))
     hue-rotate(var(--hue, 0deg));
 }
-.fullscreen {
-  position: fixed;
-  top: 120px;
-  right: 40px;
+
+.fullscreen{
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 0;
-  outline: 0;
-  background-size: contain;
-  transition: 0.3s;
-  cursor: pointer;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
   background-image: url('img/fullscreen-open.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 120px;
+  right: 15%;
+   
 }
-.fullscreen:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-:-webkit-full-screen .fullscreen {
+
+.exit{
   background-image: url('img/fullscreen-exit.svg');
 }
+
 .footer {
   border-top: 1px solid;
   border-image-slice: 1;
@@ -259,6 +265,11 @@ img {
   right: -5px;
   letter-spacing: 0;
 }
+
+canvas {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .main {
     padding-top: 40px;
